@@ -26,7 +26,7 @@ namespace DababaseConnection.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|database.db;Encrypt Database=True;Password=myPassword;" +
-            "\r\nPersist Security Info=False;")]
+            "Persist Security Info=False;  ")]
         public string DatabaseConnectionString {
             get {
                 return ((string)(this["DatabaseConnectionString"]));
