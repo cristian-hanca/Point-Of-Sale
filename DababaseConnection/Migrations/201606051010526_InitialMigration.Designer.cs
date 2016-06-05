@@ -13,7 +13,7 @@ namespace DababaseConnection.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201606050924119_InitialMigration"; }
+            get { return "201606051010526_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

@@ -1,3 +1,5 @@
+using Models;
+
 namespace DababaseConnection.Migrations
 {
     using System;

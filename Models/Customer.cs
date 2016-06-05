@@ -18,12 +18,15 @@ namespace Models
         public string Cnp { get; set; }
 
         [Required]
+        [MaxLength(64)]
         public string Name { get; set; }
 
         [DefaultValue("")]
+        [MaxLength(64)]
         public string LastName { get; set; }
 
         [DefaultValue("")]
+        [MaxLength(64)]
         public string Phone { get; set; }
 
         protected bool Equals(Customer other)

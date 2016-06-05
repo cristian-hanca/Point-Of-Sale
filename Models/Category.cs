@@ -11,9 +11,15 @@ namespace Models
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
+        
+        public long? ParentCategoryId { get; set; }
 
         [Required]
+        [MaxLength(64)]
         public string Name { get; set; }
+
+        [ForeignKey("ParentCategoryId")]
+        public virtual Category ParentCategory { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
 
