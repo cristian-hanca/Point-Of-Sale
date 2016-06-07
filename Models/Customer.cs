@@ -5,7 +5,10 @@ using System.Data;
 
 namespace Models
 {
-    public class Customer
+    /// <summary>
+    ///     Customer Model / Table.
+    /// </summary>
+    public sealed class Customer
     {
 
         [Required]

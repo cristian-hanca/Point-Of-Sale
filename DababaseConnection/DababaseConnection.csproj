@@ -67,9 +67,15 @@
     <Compile Include="Migrations\201606051010526_InitialMigration.Designer.cs">
       <DependentUpon>201606051010526_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606071027234_AddedSettings.cs" />
+    <Compile Include="Migrations\201606071027234_AddedSettings.Designer.cs">
+      <DependentUpon>201606071027234_AddedSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MockData\BaseMockSeeder.cs" />
+    <Compile Include="MockData\EmptySeeder.cs" />
     <Compile Include="MockData\IMockSeeder.cs" />
+    <Compile Include="MockData\Implementation\Specialized\SettingsSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\CustomerSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\CategorySeeder.cs" />
     <Compile Include="MockData\Implementation\MockDataSeeder.cs" />
@@ -98,6 +104,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606051010526_InitialMigration.resx">
       <DependentUpon>201606051010526_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606071027234_AddedSettings.resx">
+      <DependentUpon>201606071027234_AddedSettings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,7 +5,10 @@ using System.Data;
 
 namespace Models
 {
-    public class Product
+    /// <summary>
+    ///     Product Model / Table.
+    /// </summary>
+    public sealed class Product
     {
 
         [Required]
@@ -27,9 +30,9 @@ namespace Models
         public decimal Vat { get; set; }
 
         [ForeignKey("CategoryId")]
-        public virtual Category Category { get; set; }
+        public Category Category { get; set; }
 
-        protected bool Equals(Product other)
+        private bool Equals(Product other)
         {
             return string.Equals(Name, other.Name);
         }

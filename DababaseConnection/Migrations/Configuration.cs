@@ -4,7 +4,7 @@ using DababaseConnection.MockData.Implementation;
 
 namespace DababaseConnection.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<DataContext>, IMockSeeder
+    internal sealed class Configuration : DbMigrationsConfiguration<DataContext>
     {
 
         public Configuration()
@@ -23,7 +23,7 @@ namespace DababaseConnection.Migrations
             SeedUsingMocks(new MockDataSeeder(), context);
 
             // In order to disable the use of Mock Data, comment the previous call and uncomment this line:
-            //SeedUsingMocks(this, context);
+            //SeedUsingMocks(new EmptySeeder(), context);
         }
 
         /// <summary>
@@ -36,6 +36,11 @@ namespace DababaseConnection.Migrations
             seeder.SeedCategories(context);
             seeder.SeedProducts(context);
             seeder.SeedCustomers(context);
+        }
+
+        public void SeedSettings(DataContext context)
+        {
+            throw new System.NotImplementedException();
         }
 
         /// <summary>

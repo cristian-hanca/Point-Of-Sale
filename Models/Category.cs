@@ -5,7 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models
 {
-    public class Category
+    /// <summary>
+    ///     Category Model / Table.
+    /// </summary>
+    public sealed class Category
     {
 
         [Required]
@@ -19,11 +22,11 @@ namespace Models
         public string Name { get; set; }
 
         [ForeignKey("ParentCategoryId")]
-        public virtual Category ParentCategory { get; set; }
+        public Category ParentCategory { get; set; }
 
-        public virtual ICollection<Product> Products { get; set; }
+        public ICollection<Product> Products { get; set; }
 
-        protected bool Equals(Category other)
+        private bool Equals(Category other)
         {
             return string.Equals(Name, other.Name);
         }

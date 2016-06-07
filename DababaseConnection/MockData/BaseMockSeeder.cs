@@ -11,6 +11,11 @@ namespace DababaseConnection.MockData
     /// </summary>
     internal abstract class BaseMockSeeder : IMockSeeder
     {
+        public void SeedSettings(DataContext context)
+        {
+            throw new NotImplementedException();
+        }
+
         public void SeedCategories(DataContext context)
         {
             throw new NotImplementedException();

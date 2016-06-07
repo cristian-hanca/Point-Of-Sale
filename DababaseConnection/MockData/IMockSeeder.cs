@@ -6,6 +6,12 @@
     public interface IMockSeeder
     {
         /// <summary>
+        ///     Seeds the Settings Table.
+        /// </summary>
+        /// <param name="context">Database Context</param>
+        void SeedSettings(DataContext context);
+
+        /// <summary>
         ///     Seeds the Categories Table.
         /// </summary>
         /// <param name="context">Database Context</param>
