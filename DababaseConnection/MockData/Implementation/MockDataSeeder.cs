@@ -24,5 +24,15 @@ namespace DababaseConnection.MockData.Implementation
         {
             new CustomerSeeder().SeedCustomers(context);
         }
+
+        public void SeedOrders(DataContext context)
+        {
+            new OrderSeeder().SeedOrders(context);
+        }
+
+        public void SeedOrderItems(DataContext context)
+        {
+            new OrderItemSeeder().SeedOrderItems(context);
+        }
     }
 }

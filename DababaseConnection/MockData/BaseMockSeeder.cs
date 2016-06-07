@@ -30,5 +30,15 @@ namespace DababaseConnection.MockData
         {
             throw new NotImplementedException();
         }
+
+        public void SeedOrders(DataContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SeedOrderItems(DataContext context)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

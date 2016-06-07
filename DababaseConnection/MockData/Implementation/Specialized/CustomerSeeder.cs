@@ -14,7 +14,7 @@ namespace DababaseConnection.MockData.Implementation.Specialized
         private readonly int _count;
 
         /// <summary>
-        /// Creates a new Customer Seeder that will generate the 75 Customers.
+        ///     Creates a new Customer Seeder that will generate the 75 Customers.
         /// </summary>
         public CustomerSeeder() : this(75)
         {
@@ -27,6 +27,8 @@ namespace DababaseConnection.MockData.Implementation.Specialized
         /// <param name="count">Number of Customers to generate.</param>
         public CustomerSeeder(int count)
         {
+            if (count < 0)
+                throw new ArgumentException("Count less than 0", nameof(count));
             _random = new Random();
             _count = count;
         }

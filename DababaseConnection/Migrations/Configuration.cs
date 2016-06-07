@@ -33,39 +33,13 @@ namespace DababaseConnection.Migrations
         /// <param name="context">Database Context</param>
         private void SeedUsingMocks(IMockSeeder seeder, DataContext context)
         {
+            seeder.SeedSettings(context);
             seeder.SeedCategories(context);
             seeder.SeedProducts(context);
             seeder.SeedCustomers(context);
+            seeder.SeedOrders(context);
+            seeder.SeedOrderItems(context);
         }
-
-        public void SeedSettings(DataContext context)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        ///     Base (empty) seed implementation.
-        /// </summary>
-        /// <param name="context">Database Context</param>
-        public void SeedCategories(DataContext context)
-        {
-        }
-
-        /// <summary>
-        ///     Base (empty) seed implementation.
-        /// </summary>
-        /// <param name="context">Database Context</param>
-        public void SeedProducts(DataContext context)
-        {
-        }
-
-        /// <summary>
-        ///     Base (empty) seed implementation.
-        /// </summary>
-        /// <param name="context">Database Context</param>
-        public void SeedCustomers(DataContext context)
-        {
-        }
-
+       
     }
 }

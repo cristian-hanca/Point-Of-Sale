@@ -28,5 +28,17 @@
         /// </summary>
         /// <param name="context">Database Context</param>
         void SeedCustomers(DataContext context);
+
+        /// <summary>
+        ///     Seeds the Orders Table.
+        /// </summary>
+        /// <param name="context">Database Context</param>
+        void SeedOrders(DataContext context);
+
+        /// <summary>
+        ///     Seeds the Order Items Table.
+        /// </summary>
+        /// <param name="context">Database Context</param>
+        void SeedOrderItems(DataContext context);
     }
 }

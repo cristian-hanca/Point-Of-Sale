@@ -8,7 +8,7 @@ namespace Models
     /// <summary>
     ///     Product Model / Table.
     /// </summary>
-    public sealed class Product
+    public class Product
     {
 
         [Required]
@@ -30,7 +30,7 @@ namespace Models
         public decimal Vat { get; set; }
 
         [ForeignKey("CategoryId")]
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
         private bool Equals(Product other)
         {

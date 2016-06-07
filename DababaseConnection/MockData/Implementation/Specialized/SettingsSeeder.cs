@@ -4,7 +4,7 @@ using Models;
 namespace DababaseConnection.MockData.Implementation.Specialized
 {
     /// <summary>
-    ///     Specialized Mock Data Seeder for Categories.
+    ///     Specialized Mock Data Seeder for Settings.
     /// </summary>
     internal class SettingsSeeder : BaseMockSeeder
     {

@@ -71,10 +71,20 @@
     <Compile Include="Migrations\201606071027234_AddedSettings.Designer.cs">
       <DependentUpon>201606071027234_AddedSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606071133427_AddedOrders.cs" />
+    <Compile Include="Migrations\201606071133427_AddedOrders.Designer.cs">
+      <DependentUpon>201606071133427_AddedOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606072118117_QuantityOrderItem.cs" />
+    <Compile Include="Migrations\201606072118117_QuantityOrderItem.Designer.cs">
+      <DependentUpon>201606072118117_QuantityOrderItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MockData\BaseMockSeeder.cs" />
     <Compile Include="MockData\EmptySeeder.cs" />
     <Compile Include="MockData\IMockSeeder.cs" />
+    <Compile Include="MockData\Implementation\Specialized\OrderItemSeeder.cs" />
+    <Compile Include="MockData\Implementation\Specialized\OrderSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\SettingsSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\CustomerSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\CategorySeeder.cs" />
@@ -107,6 +117,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606071027234_AddedSettings.resx">
       <DependentUpon>201606071027234_AddedSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606071133427_AddedOrders.resx">
+      <DependentUpon>201606071133427_AddedOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606072118117_QuantityOrderItem.resx">
+      <DependentUpon>201606072118117_QuantityOrderItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
@@ -8,7 +10,7 @@ namespace Models
     /// <summary>
     ///     Customer Model / Table.
     /// </summary>
-    public sealed class Customer
+    public class Customer
     {
 
         [Required]
@@ -31,6 +33,8 @@ namespace Models
         [DefaultValue("")]
         [MaxLength(64)]
         public string Phone { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; }
 
         protected bool Equals(Customer other)
         {

@@ -8,7 +8,7 @@ namespace Models
     /// <summary>
     ///     Category Model / Table.
     /// </summary>
-    public sealed class Category
+    public class Category
     {
 
         [Required]
@@ -22,9 +22,9 @@ namespace Models
         public string Name { get; set; }
 
         [ForeignKey("ParentCategoryId")]
-        public Category ParentCategory { get; set; }
+        public virtual Category ParentCategory { get; set; }
 
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
         private bool Equals(Category other)
         {
