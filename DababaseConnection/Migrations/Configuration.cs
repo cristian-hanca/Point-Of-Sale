@@ -33,6 +33,7 @@ namespace DababaseConnection.Migrations
         /// <param name="context">Database Context</param>
         private void SeedUsingMocks(IMockSeeder seeder, DataContext context)
         {
+            seeder.SeedCurrencies(context);
             seeder.SeedSettings(context);
             seeder.SeedCategories(context);
             seeder.SeedProducts(context);

@@ -14,7 +14,8 @@ namespace DababaseConnection
             // Fixed "Provider not loaded" error
             var ensureDLLIsCopied = SqlProviderServices.Instance;
         }
-        
+
+        public DbSet<Currency> Currencies { get; set; }
         public DbSet<Models.Settings> Settingses { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }

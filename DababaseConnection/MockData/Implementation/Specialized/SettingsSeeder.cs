@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity.Migrations;
+using System.Linq;
 using Models;
 
 namespace DababaseConnection.MockData.Implementation.Specialized
@@ -13,7 +14,7 @@ namespace DababaseConnection.MockData.Implementation.Specialized
             context.Settingses.AddOrUpdate(
                 new Settings
                 {
-                    BaseCurrency = "RON"
+                    BaseCurrency = context.Currencies.First(x => x.Code.Equals("RON"))
                 });
             context.SaveChanges();
         }

@@ -15,6 +15,14 @@ namespace DababaseConnection.MockData
         ///     Base (empty) seed implementation.
         /// </summary>
         /// <param name="context">Database Context</param>
+        public void SeedCurrencies(DataContext context)
+        {
+        }
+
+        /// <summary>
+        ///     Base (empty) seed implementation.
+        /// </summary>
+        /// <param name="context">Database Context</param>
         public void SeedSettings(DataContext context)
         {
         }

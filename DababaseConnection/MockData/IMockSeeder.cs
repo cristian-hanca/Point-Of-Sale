@@ -6,6 +6,12 @@
     public interface IMockSeeder
     {
         /// <summary>
+        ///     Seeds the Currencies Table.
+        /// </summary>
+        /// <param name="context">Database Context</param>
+        void SeedCurrencies(DataContext context);
+
+        /// <summary>
         ///     Seeds the Settings Table.
         /// </summary>
         /// <param name="context">Database Context</param>

@@ -13,7 +13,7 @@ namespace Models
     ///     Settings Model / Table.
     ///     Intended as being a Single Row!
     /// </summary>
-    public sealed class Settings
+    public class Settings
     {
 
         [Required]
@@ -21,10 +21,10 @@ namespace Models
         public long Id { get; set; }
 
         [Required]
-        [DefaultValue("EUR")]
-        [MinLength(3)]
-        [MaxLength(3)]
-        public string BaseCurrency { get; set; }
+        public long BaseCurrencyId { get; set; }
+
+        [ForeignKey("BaseCurrencyId")]
+        public virtual Currency BaseCurrency { get; set; }
 
     }
 }

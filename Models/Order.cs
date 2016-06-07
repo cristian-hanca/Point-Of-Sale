@@ -41,11 +41,16 @@ namespace Models
 
         public virtual ICollection<OrderItem> Items { get; set; }
 
+        public long CurrencyId { get; set; }
+
+        [ForeignKey("CurrencyId")]
+        public virtual Currency Currency { get; set; }
+
         /// <summary>
         ///     Gets the total to be payed.
         /// </summary>
         public virtual decimal Total {
-            get { return Items.Sum(x => x.GetPrice() * x.Quantity); }
+            get { return Items.Sum(x => x.Price * x.Quantity); }
         }
         
         public virtual ICollection<OrderEvent> Events { get; set; }

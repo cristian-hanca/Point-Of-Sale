@@ -10,9 +10,10 @@ using System.Threading.Tasks;
 namespace Models
 {
     /// <summary>
-    ///     Order Item Model / Table.
+    ///     Currency Model / Table.
+    ///     Intended to store accepted currencies.
     /// </summary>
-    public class OrderItem
+    public class Currency
     {
 
         [Required]
@@ -20,26 +21,17 @@ namespace Models
         public long Id { get; set; }
 
         [Required]
-        public long OrderId { get; set; }
+        [MinLength(3)]
+        [MaxLength(3)]
+        public string Code { get; set; }
 
-        [ForeignKey("OrderId")]
-        public virtual Order Order { get; set; }
-        
         [Required]
-        public long ProductId { get; set; }
-
-        [ForeignKey("ProductId")]
-        public virtual Product Product { get; set; }
+        [MaxLength(64)]
+        public string Name { get; set; }
 
         [Required]
         [DefaultValue(1)]
-        public int Quantity { get; set; }
-
-        public decimal? AlterPrice { get; set; }
-
-        public decimal Price {
-            get { return AlterPrice ?? Product.Price; }
-        }
+        public decimal ToBase { get; set; }
 
     }
 }

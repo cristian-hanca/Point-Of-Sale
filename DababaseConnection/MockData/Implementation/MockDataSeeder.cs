@@ -5,6 +5,11 @@ namespace DababaseConnection.MockData.Implementation
 {
     internal class MockDataSeeder : IMockSeeder
     {
+        public void SeedCurrencies(DataContext context)
+        {
+            new CurrencySeeder().SeedCurrencies(context);
+        }
+
         public void SeedSettings(DataContext context)
         {
             new SettingsSeeder().SeedSettings(context);
