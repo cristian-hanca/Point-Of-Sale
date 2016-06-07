@@ -25,14 +25,27 @@ namespace DababaseConnection.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|database.db;Encrypt Database=True;Password=myPassword;" +
-            "Persist Security Info=False;  ")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=C:\\[Projects]\\Point-Of-Sale\\database.sdf;Encrypt Database=True;Passwo" +
+            "rd=myPassword;Persist Security Info=False;  ")]
         public string DatabaseConnectionString {
             get {
                 return ((string)(this["DatabaseConnectionString"]));
             }
             set {
                 this["DatabaseConnectionString"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|database.sdf;Encrypt Database=True;Password=myPassword" +
+            ";Persist Security Info=False;  ")]
+        public string DBCS {
+            get {
+                return ((string)(this["DBCS"]));
+            }
+            set {
+                this["DBCS"] = value;
             }
         }
     }

@@ -5,7 +5,7 @@ using Models;
 
 namespace DababaseConnection
 {
-    public sealed class DataContext : DbContext
+    public class DataContext : DbContext
     {
         public DataContext() : base(Properties.Settings.Default.DatabaseConnectionString)
         {
@@ -14,7 +14,7 @@ namespace DababaseConnection
             // Fixed "Provider not loaded" error
             var ensureDLLIsCopied = SqlProviderServices.Instance;
         }
-
+        
         public DbSet<Models.Settings> Settingses { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
