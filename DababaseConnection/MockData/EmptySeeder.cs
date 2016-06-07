@@ -58,5 +58,13 @@ namespace DababaseConnection.MockData
         public void SeedOrderItems(DataContext context)
         {
         }
+
+        /// <summary>
+        ///     Base (empty) seed implementation.
+        /// </summary>
+        /// <param name="context">Database Context</param>
+        public void SeedOrderEvents(DataContext context)
+        {
+        }
     }
 }

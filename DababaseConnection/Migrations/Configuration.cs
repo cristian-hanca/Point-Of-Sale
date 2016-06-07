@@ -39,6 +39,7 @@ namespace DababaseConnection.Migrations
             seeder.SeedCustomers(context);
             seeder.SeedOrders(context);
             seeder.SeedOrderItems(context);
+            seeder.SeedOrderEvents(context);
         }
        
     }

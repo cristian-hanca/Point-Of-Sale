@@ -34,5 +34,10 @@ namespace DababaseConnection.MockData.Implementation
         {
             new OrderItemSeeder().SeedOrderItems(context);
         }
+
+        public void SeedOrderEvents(DataContext context)
+        {
+            new OrderEventSeeder().SeedOrderEvents(context);
+        }
     }
 }

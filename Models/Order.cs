@@ -47,6 +47,12 @@ namespace Models
         public virtual decimal Total {
             get { return Items.Sum(x => x.GetPrice() * x.Quantity); }
         }
+        
+        public virtual ICollection<OrderEvent> Events { get; set; }
+
+        public virtual OrderEvent LatestEvent {
+            get { return Events.OrderByDescending(x => x.DateTime).First(); }
+        }
 
     }
 }

@@ -40,5 +40,10 @@ namespace DababaseConnection.MockData
         {
             throw new NotImplementedException();
         }
+
+        public void SeedOrderEvents(DataContext context)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

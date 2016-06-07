@@ -40,5 +40,11 @@
         /// </summary>
         /// <param name="context">Database Context</param>
         void SeedOrderItems(DataContext context);
+
+        /// <summary>
+        ///     Seeds the Order Events Table.
+        /// </summary>
+        /// <param name="context">Database Context</param>
+        void SeedOrderEvents(DataContext context);
     }
 }

@@ -79,12 +79,17 @@
     <Compile Include="Migrations\201606072118117_QuantityOrderItem.Designer.cs">
       <DependentUpon>201606072118117_QuantityOrderItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606072315223_AddedOrderEvents.cs" />
+    <Compile Include="Migrations\201606072315223_AddedOrderEvents.Designer.cs">
+      <DependentUpon>201606072315223_AddedOrderEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MockData\BaseMockSeeder.cs" />
     <Compile Include="MockData\EmptySeeder.cs" />
     <Compile Include="MockData\IMockSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\OrderItemSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\OrderSeeder.cs" />
+    <Compile Include="MockData\Implementation\Specialized\OrderEventSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\SettingsSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\CustomerSeeder.cs" />
     <Compile Include="MockData\Implementation\Specialized\CategorySeeder.cs" />
@@ -123,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606072118117_QuantityOrderItem.resx">
       <DependentUpon>201606072118117_QuantityOrderItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606072315223_AddedOrderEvents.resx">
+      <DependentUpon>201606072315223_AddedOrderEvents.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
