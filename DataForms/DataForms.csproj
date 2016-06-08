@@ -51,10 +51,13 @@
   <ItemGroup>
     <Compile Include="Base\EditForm.cs" />
     <Compile Include="Base\InsertForm.cs" />
+    <Compile Include="Create\OrderItemCreate.cs" />
+    <Compile Include="Create\OrderCreate.cs" />
     <Compile Include="Create\CustomerCreate.cs" />
     <Compile Include="Create\ProductCreate.cs" />
     <Compile Include="Create\CategoryCreate.cs" />
     <Compile Include="DataForm.cs" />
+    <Compile Include="Edit\OrderEdit.cs" />
     <Compile Include="Edit\CategoryEdit.cs" />
     <Compile Include="Edit\CustomerEdit.cs" />
     <Compile Include="Edit\ProductEdit.cs" />

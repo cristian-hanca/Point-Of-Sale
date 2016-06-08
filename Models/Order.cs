@@ -56,7 +56,7 @@ namespace Models
         public virtual ICollection<OrderEvent> Events { get; set; }
 
         public virtual OrderEvent LatestEvent {
-            get { return Events.OrderByDescending(x => x.DateTime).First(); }
+            get { return Events?.OrderByDescending(x => x.DateTime).First(); }
         }
 
     }
