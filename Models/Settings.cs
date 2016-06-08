@@ -13,7 +13,7 @@ namespace Models
     ///     Settings Model / Table.
     ///     Intended as being a Single Row!
     /// </summary>
-    public class Settings
+    public class Settings : IDataModel
     {
 
         [Required]

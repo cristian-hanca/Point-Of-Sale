@@ -13,7 +13,7 @@ namespace Models
     ///     Currency Model / Table.
     ///     Intended to store accepted currencies.
     /// </summary>
-    public class Currency
+    public class Currency : IDataModel
     {
 
         [Required]

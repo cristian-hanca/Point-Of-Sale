@@ -10,7 +10,7 @@ namespace Models
     /// <summary>
     ///     Customer Model / Table.
     /// </summary>
-    public class Customer
+    public class Customer : IDataModel
     {
 
         [Required]

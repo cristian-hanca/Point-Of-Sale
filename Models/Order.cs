@@ -8,7 +8,7 @@ namespace Models
     /// <summary>
     ///     Order Model / Table.
     /// </summary>
-    public class Order
+    public class Order : IDataModel
     {
 
         [Required]

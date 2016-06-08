@@ -12,7 +12,7 @@ namespace Models
     /// <summary>
     ///     Order Event Model / Table.
     /// </summary>
-    public class OrderEvent
+    public class OrderEvent : IDataModel
     {
 
         [Required]

@@ -8,7 +8,7 @@ namespace Models
     /// <summary>
     ///     Category Model / Table.
     /// </summary>
-    public class Category
+    public class Category : IDataModel
     {
 
         [Required]

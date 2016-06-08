@@ -12,7 +12,7 @@ namespace Models
     /// <summary>
     ///     Order Item Model / Table.
     /// </summary>
-    public class OrderItem
+    public class OrderItem : IDataModel
     {
 
         [Required]
