@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DababaseConnection;
+using DataAccessExtensions;
 using DataForms.Create;
 using DataForms.Edit;
 using Models;
@@ -54,7 +55,7 @@ namespace PointOfSaleTest
         static void TestProducts()
         {
             // Get Category.
-            Category category = _context.Categories.First(x => x.Name.Equals("Main Category"));
+            Category category = _context.FindCategoryByName("Main Category");
 
             // List all Products by Name.
             List<Product> list = _context.Products.OrderBy(x => x.Name).ToList();
@@ -126,19 +127,18 @@ namespace PointOfSaleTest
             // Get a Random Number Generator.
             Random r = new Random();
             // Get Customer.
-            Customer customer = _context.Customers.First(x => x.Cnp.Equals("1900101123456"));
+            Customer customer = _context.FindCustomerByCnp("1900101123456");
             // Get Currencies.
-            Currency eur = _context.Currencies.First(x => x.Code.Equals("EUR"));
+            Currency eur = _context.FindCurrencyByCode("EUR");
             
             // List all Orders.
             List<Order> list = _context.Orders.ToList();
 
             // Create an Order (Exchange) with 5 Random products.
-            List<Product> products = _context.Products.OrderBy(o => Guid.NewGuid()).Take(5).ToList();
             Order order = new OrderCreate(_context, DateTime.Now)
                 .SetCustomer(customer)
                 .SetCurrency(eur)
-                .AddItemRange(products.Select(x => 
+                .AddItemRange(_context.SampleProducts(5).Select(x => 
                     new OrderItemCreate()
                         .SetProduct(x)
                         .SetQuantity(r.Next(-10, 10))
