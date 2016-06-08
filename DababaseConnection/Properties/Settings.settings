@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="DatabaseConnectionString" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=C:\[Projects]\Point-Of-Sale\database.sdf;Encrypt Database=True;Password=myPassword;Persist Security Info=False;  </Value>
+      <Value Profile="(Default)">Data Source=|DataDirectory|database.sdf;Encrypt Database=True;Password=myPassword;Persist Security Info=False;  </Value>
     </Setting>
   </Settings>
 </SettingsFile>
