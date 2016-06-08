@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataConfiguration.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Migrations\201606051010526_InitialMigration.cs" />
     <Compile Include="Migrations\201606051010526_InitialMigration.Designer.cs">
@@ -108,7 +109,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
