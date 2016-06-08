@@ -3,14 +3,14 @@
 The idea of this project is not to provide a Program ready for production, but rather a complex API that can be used to create the final Production Product.
 To this end, there are multiple components to this project, as described bellow.
 
-Note: .NET 4.5 was used.
+Note: .NET 4.5 was used.  
 Note: Since it is very hard to demo a project designed to be a Class Library I recommend 2 methods of viewing the Data:
-	- Debugging View: Just run the Test Project in Debug mode, breackpoint locations should be provided.
-	- LINQPad is a great (and free) application to execute LINQ-to-SQL Calls providing the DLL containing the Entity Framework Context.
-		- Please use the DababaseConnection.dll Assembly and DababaseConnection.dll.config Config File.
-			- Please note taht due to the way LINQPad works regarding Relative Paths, you must either:
-			- Place database.sdf in where LINQPad.exe exists.
-		- Edit the Connection String in DababaseConnection.dll.config to use an Absolute path to the Dtabase.
+- Debugging View: Just run the Test Project in Debug mode, breackpoint locations should be provided.
+- LINQPad is a great (and free) application to execute LINQ-to-SQL Calls providing the DLL containing the Entity Framework Context.
+	- Please use the DababaseConnection.dll Assembly and DababaseConnection.dll.config Config File.
+		- Please note taht due to the way LINQPad works regarding Relative Paths, you must either:
+		- Place database.sdf in where LINQPad.exe exists.
+	- Edit the Connection String in DababaseConnection.dll.config to use an Absolute path to the Dtabase.
 		
 #Componets:
 
