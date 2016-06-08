@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.Entity.Migrations;
+using System.Globalization;
 using Models;
 using RandomNameGenerator;
 
@@ -41,12 +42,18 @@ namespace DababaseConnection.MockData.Implementation.Specialized
                 context.Customers.AddOrUpdate(new Customer
                 {
                     Cnp = cnp++.ToString(),
-                    Name = NameGenerator.GenerateFirstName(_random.NextDouble() >= 0.5 ? Gender.Male : Gender.Female),
-                    LastName = NameGenerator.GenerateLastName(),
+                    Name = FirstLetterToUpper(NameGenerator.GenerateFirstName(
+                        _random.NextDouble() >= 0.5 ? Gender.Male : Gender.Female)),
+                    LastName = FirstLetterToUpper(NameGenerator.GenerateLastName()),
                     Phone = "070012345678"
                 });
             }
             context.SaveChanges();
+        }
+
+        private string FirstLetterToUpper(string str)
+        {
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(str.ToLower());
         }
     }
 }

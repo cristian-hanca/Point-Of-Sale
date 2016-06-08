@@ -16,6 +16,7 @@ namespace PointOfSaleTest
             _context = new DataContext();
             TestCategories();
             TestProducts();
+            TestCustomers();
         }
 
         static void TestCategories()
@@ -82,6 +83,39 @@ namespace PointOfSaleTest
             _context.SaveChanges();
 
             list = _context.Products.OrderBy(x => x.Name).ToList();
+            list = null; // Place to put a break-point.
+        }
+
+        static void TestCustomers()
+        {
+            // List all Customers by Name
+            List<Customer> list = _context.Customers.OrderBy(x => x.Name).ToList();
+
+            // Create a new Customer
+            Customer cust1 = new CustomerCreate(_context)
+                .SetCnp("1900101123456")
+                .SetName("John")
+                .SetLastName("Smith")
+                .Execute();
+
+            // Create another Customer
+            Customer cust2 = new CustomerCreate(_context)
+                .SetCnp("1900101654321")
+                .SetName("John")
+                .SetLastName("Cena")
+                .SetPhone("070087654321")
+                .Execute();
+
+            // Edit the first Customer
+            new CustomerEdit(_context, cust1)
+                .SetPhone("070012345678")
+                .Execute();
+
+            // Delete the second Customer
+            _context.Customers.Remove(cust2);
+            _context.SaveChanges();
+
+            list = _context.Customers.OrderBy(x => x.Name).ToList();
             list = null; // Place to put a break-point.
         }
 
